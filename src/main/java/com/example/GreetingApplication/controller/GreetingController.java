@@ -65,6 +65,15 @@ public class GreetingController {
         return greetingService.deleteGreetingById(id);
     }
 
+    /*UC8
+     *Ability for the Greeting App to Edit a Greeting Messages in the Repository
+     * localhost:8080/edit/2
+     */
+
+    @PutMapping("/edit/{id}")
+    public Greeting editGreetingById(@PathVariable long id, @RequestParam String name) {
+        return greetingService.editGreetingById(id, name);
+    }
 }
 
 

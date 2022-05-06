@@ -1,5 +1,4 @@
 package com.example.GreetingApplication.service;
-
 import com.example.GreetingApplication.entity.Greeting;
 import com.example.GreetingApplication.entity.User;
 
@@ -13,6 +12,8 @@ public interface GreetingService {
     List<Greeting> getAll();
 
     List<Greeting> deleteGreetingById(Long id);
+
+    Greeting editGreetingById(long id, String name);
 }
 
 

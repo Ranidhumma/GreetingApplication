@@ -38,5 +38,14 @@ public class GreetingServiceimpl implements GreetingService {
         greetingRepository.deleteById(id);
         return greetingRepository.findAll();
     }
+
+    @Override
+    public Greeting editGreetingById(long id, String name) {
+        Greeting greeting = greetingRepository.findById(id).get();
+        greeting.setMessage(name);
+        greetingRepository.save(greeting);
+        return greeting;
+
+    }
 }
 
