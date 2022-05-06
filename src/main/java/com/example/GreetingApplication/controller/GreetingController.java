@@ -34,6 +34,16 @@ public class GreetingController {
 
     }
 
+    /*UC5
+     *Ability for the Greeting App to find a Greeting Message by Id in the Repository
+     *localhost:8080/path/5
+     *"id": 5,
+     *"message": "Hello, Rani!"
+     */
+    @GetMapping("/path/{id}")
+    public Greeting getElementById(@PathVariable Long id) {
+        return greetingService.getGreetingById(id);
+    }
 
 }
 
