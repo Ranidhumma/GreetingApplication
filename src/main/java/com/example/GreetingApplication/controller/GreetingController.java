@@ -67,7 +67,7 @@ public class GreetingController {
 
     /*UC8
      *Ability for the Greeting App to Edit a Greeting Messages in the Repository
-     * localhost:8080/edit/2
+     * edit the greeting message
      */
 
     @PutMapping("/edit/{id}")
