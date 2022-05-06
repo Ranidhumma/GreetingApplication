@@ -53,7 +53,19 @@ public class GreetingController {
     @GetMapping("/all")
     public List<Greeting> getAll() {
         return greetingService.getAll();
+
+    }
+
+    /*UC7
+     *Ability for the Greeting App to Delete a Greeting Messages in the Repository
+     *localhost:8080/delete/3
+     */
+    @DeleteMapping("/delete/{id}")
+    public List<Greeting> deleteGreetingById(@PathVariable Long id) {
+        return greetingService.deleteGreetingById(id);
     }
 
 }
+
+
 
