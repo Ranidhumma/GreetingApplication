@@ -15,6 +15,9 @@ public class GreetingServiceimpl implements GreetingService {
     @Autowired
     private GreetingRepository greetingRepository;
 
+    /*
+     * addGreeting Method
+     */
     @Override
     public Greeting addGreeting(User user) {
         String message = String.format(template, (user.toString().isEmpty()) ? "Hello World" : user.toString());
