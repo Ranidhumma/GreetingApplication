@@ -12,7 +12,7 @@ public class Greeting {
     @Id
     @Column(name = "id", nullable = false)
     private final long id;
-    private final String message;
+    private String message;
     public Greeting(long id, String message){
         this.id = id;
         this.message = message;
@@ -22,8 +22,8 @@ public class Greeting {
         message = "";
     }
 
-    public void setMessage(String name) {
-
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
 
